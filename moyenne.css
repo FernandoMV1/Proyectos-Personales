@@ -1,0 +1,29 @@
+h1 {
+    background-color: rgb(71, 68, 68);
+    color: white;
+    text-align: center;
+}
+
+#maDiv{
+
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    border: 2px solid black;
+    font-size: 40px;
+
+
+}
+.RED{
+    background-color: red;
+}
+.JAU{
+    background-color: yellow;
+}
+.BLE{
+    background-color: blue;
+}
+.VER{
+    background-color: green;
+}
+
