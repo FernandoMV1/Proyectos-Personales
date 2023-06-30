@@ -1,0 +1,126 @@
+```{r}
+2*2
+```
+
+
+```{r}
+## las variables se llaman objetos y se representan asi:
+peso_lb<-100
+peso_kg = peso_lb/2.2
+peso_kg
+```
+```{r}
+# Asignar vectores
+edades <-c(50,55,60,65)
+#recall
+edades
+#función c signfica "combinar"
+```
+```{r}
+#usar funciones para usar estudiar a los vectores:
+#en python para saber la cantidad se usa 'len' aqui se usa:
+length(edades)
+```
+```{r}
+#'str' es string en python, en R es structure
+str(edades)
+```
+```{r}
+#Operaciones estadisticas:
+#mean es media
+#range es rango
+mean(edades)
+range(edades)
+```
+```{r}
+organos<-c("pulmones","corazon","higado")
+organos
+```
+```{r}
+#redondear variables
+round(peso_kg)
+```
+
+```{r}
+#cadena logica numeros
+numm_char<-c(1, 2, 3, TRUE)
+#sigue la sucesion logica
+#cadena caracteres
+numm_logical<-c(1, 2, 3, "a")
+#convierte todo a texto
+#cadena logica caracteres
+char_logical<-c("a","b","c", TRUE)
+#Trampa
+tricky<-c(1,2,3,"4")
+#todos se vuelven caracteres
+```
+
+```{r}
+#Para quitar una variable se usa "remove":
+remove(numm_char,numm_logical)
+
+```
+
+```{r}
+#Agregar valores al final de un vector
+edades<-c(edades,90,100,1000)
+```
+
+```{r}
+#Extraer el n valor
+#n=2
+organos[2]
+```
+```{r}
+#Extraer varios valores
+organos[c(2,3)]
+```
+
+```{r}
+#para excluir un objeto de una extraccion uso el simbolo negativo
+#No quiero n=2
+organos[-2]
+```
+```{r}
+#Remover valores extraidos de un vector
+edades[-c(5)]
+```
+```{r}
+#Remover valores de un vector
+edades<-edades[-c(5)]
+```
+
+```{r}
+#Poner una condicion a los vectores (filtro)
+edades > 60
+#Extraer valores con condicion (filtro)
+edades [edades>60]
+#Extraer valores especificas
+edades[edades==65]
+```
+```{r}
+#Parametro OR
+edades<50 | edades>90
+
+#Parametro AND
+edades<50 & edades>90
+```
+```{r}
+heights<-c(2,4,4,NA,6)
+#no tomar en cuenta los valores vacios con na.rm:
+max(heights, na.rm=TRUE)
+```
+```{r}
+#Evaluar cuales son NA
+is.na(heights)
+```
+
+```{r}
+#calcular la mediana
+median(heights,na.rm=TRUE)
+```
+```{r}
+#graficos
+hist(heights)
+```
+

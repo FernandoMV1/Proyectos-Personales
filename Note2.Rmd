@@ -1,0 +1,114 @@
+```{r}
+#crear un directorio
+dir.create("data")
+
+```
+
+```{r}
+#descargar los datos de un URL
+download.file("https://raw.githubusercontent.com/fredhutchio/R_intro/master/extra/clinical.csv", "data/clinical.csv")
+```
+```{r}
+#mostrar el dataframe
+clinical<- read.csv("data/clinical.csv")
+
+```
+
+```{r}
+#Un data frame es una tabla hecha de vectores (columna) de la misma longitud!
+#saber las dimensiones
+dim(clinical)
+```
+```{r}
+#primeras 5 filas
+head(clinical)
+```
+```{r}
+#ultimas 3 filas
+tail(clinical,n=3)
+```
+
+```{r}
+#estructure
+str(clinical)
+```
+
+```{r}
+#info de cada una de las variables
+summary(clinical)
+```
+```{r}
+#ver el nombre de las variables
+names(clinical)
+```
+```{r}
+#creando un sub-set de los datos
+#columna 1
+first_column<-clinical[,1]
+```
+```{r}
+#una sola fila
+first_row<-clinical[1,]
+```
+
+```{r}
+#elegir mas de una columna
+first_column<-(c[1,2])
+```
+
+```{r}
+#una sola celda
+single_cell<-clinical[1,1]
+```
+
+```{r}
+#rango de celdas
+range_cell<-clinical[1:5,2]
+#me da los valores de la fila 1 a la 5 para la columna 2
+```
+
+```{r}
+#rango para celdas especificas
+range1_cell<-clinical[c(1,3), 1]
+#solo me da los valores de las filas 1 y 3 en la columna 1
+```
+
+```{r}
+#excluir la primera columna
+exclude_col<-clinical[,-1]
+#usamos lo mismo para excuir que antes para crear sub-sets (rango,rango especifico, una sola celda...)
+```
+
+```{r}
+#usando nombres de columnas
+name_col1<-clinical["tumor_stage"]
+name_col2<-clinical[,"tumor_stage"]
+
+```
+
+```{r}
+name_col3<-clinical[c("tumor_stage","vital_status")]
+name_col4<-clinical[ ,c("tumor_stage","vital_status")]
+```
+
+```{r}
+name_col5<-clinical$primary_diagnosis
+```
+
+Factores
+```{r}
+read.csv("data/clinical.csv", stringsAsFactors = TRUE)
+```
+```{r}
+summary(clinical)
+
+```
+```{r}
+#crear un vector de factor
+
+```
+
+```{r}
+
+```
+
